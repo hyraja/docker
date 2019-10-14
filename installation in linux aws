@@ -1,0 +1,8 @@
+sudo apt-get update ## update the instance first.
+sudo docker version ## check docker previously present or not.
+sudo snap install docker ## install docker to your machine.
+sudo docker run -d tomcat ## adding tomcat image to docker.
+sudo docker ps ## view all the process status along with container id.
+sudo docker stop 095d3d22a45b ## stop particular image running in docker '095d3d22a45b'<< container id.
+
+
