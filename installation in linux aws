@@ -1,8 +1,18 @@
-sudo apt-get update ## update the instance first.
-sudo docker version ## check docker previously present or not.
-sudo snap install docker ## install docker to your machine.
-sudo docker run -d tomcat ## adding tomcat image to docker.
-sudo docker ps ## view all the process status along with container id.
-sudo docker stop 095d3d22a45b ## stop particular image running in docker '095d3d22a45b'<< container id.
+## The first step is to add the GPG key for the official Docker repository:
+     $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+## Then add the Docker repository to APT sources:
+     $ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+## Next, we update the package database:
+     $ sudo apt-get update
+## Now we’re ready to install Docker CE:
+     $ sudo apt-get install -y docker-ce
+## Docker CE should now be installed. Check using the docker version command:
+     $ docker --version
+  Congrats. You’re “almost” all set!
+  
+# To reduce the need to constantly use sudo. We can do that using the usermod command and add the current user to the docker group. 
+     $ sudo usermod -aG docker ${USER}
 
-
+## Now just exist the ssh session and reenter to get the changes to take affect.
+## Once you reenter your EC2 instance you type the docker info command for good measure.
+     $ docker info
