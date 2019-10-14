@@ -16,3 +16,28 @@
 ## Now just exist the ssh session and reenter to get the changes to take affect.
 ## Once you reenter your EC2 instance you type the docker info command for good measure.
      $ docker info
+     
+    
+    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+# help for installation
+# https://medium.com/@cjus/installing-docker-ce-on-an-aws-ec2-instance-running-ubuntu-16-04-f42fe7e80869
+     
+errors and solutions:
+## image started but not able to stop 
+   sol:run this command    sudo aa-remove-unknown
+   # https://stackoverflow.com/questions/49104733/docker-on-ubuntu-16-04-error-when-killing-container
