@@ -17,22 +17,7 @@
 ## Once you reenter your EC2 instance you type the docker info command for good measure.
      $ docker info
      
-    
-    
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+     
  
 # help for installation
 # https://medium.com/@cjus/installing-docker-ce-on-an-aws-ec2-instance-running-ubuntu-16-04-f42fe7e80869
