@@ -1,3 +1,8 @@
+docker start and stop command:
+------------------------------
+sudo service docker start ## start the Docker daemon process.
+sudo service docker stop ##  stop the Docker daemon process.
+
 Docker information command :
 ----------------------------
 docker system df  ##total disk contain by docker.
