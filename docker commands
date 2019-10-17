@@ -36,6 +36,7 @@ docker history ImageID ## see all the commands that were run against it.
 docker image purne -a ## Remove all unused images.
 docker rmi ImageID ## remove the image  and The return output will provide the Image ID of the deleted Image.
 docker rmi -f ImageID ## remove image forcefully .
+docker run --name raja image_name ## run image as your own customized name.
 
 
 
