@@ -16,6 +16,7 @@ docker ps ## return the currently running containers.
 docker ps -a ## show all list of the containers on the system.
 docker container prune ## remove all stopped containers.
 docker stats ContainerID ## the statistics of a running container.
+docker rename existing_container_name new_container_name ## rename running container.
 docker top ContainerID ## see the top processes within a container.
 docker attach ContainerID ##  Attach to the running container.(Container ID to which you need to attach.)
 docker pause ContainerID ##  pause the processes in a running container.
