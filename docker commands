@@ -14,9 +14,9 @@ docker info  ## total information of docker .
 docker run -it centos /bin/bash ## we can use the CentOS image available in Docker Hub to run CentOS on our Ubuntu machine(-it means interactive mode)
 docker ps ## return the currently running containers.
 docker ps -a ## show all list of the containers on the system.
-docker container prune ## remove all stopped containers.
 docker stats ContainerID ## the statistics of a running container.
-docker rename existing_container_name new_container_name ## rename running container.
+docker run --name raja image_name ## run image as your own customized name inside a container. 
+docker rename existing_container_name new_container_name ## rename existing  container.
 docker top ContainerID ## see the top processes within a container.
 docker attach ContainerID ##  Attach to the running container.(Container ID to which you need to attach.)
 docker pause ContainerID ##  pause the processes in a running container.
@@ -24,6 +24,7 @@ docker unpause ContainerID ## unpause the processes in a running container.
 docker kill ContainerID ##  kill the processes in a running container.
 docker stop container ID ##  stop the Docker container.
 docker run container ID ## rerun the container after stop command .
+docker container prune ## remove all stopped containers.
 docker rm container id ## remove particular container.
 docker rm -f container id ## remove particular container forcefully.
 
@@ -37,7 +38,7 @@ docker history ImageID ## see all the commands that were run against it.
 docker image purne -a ## Remove all unused images.
 docker rmi ImageID ## remove the image  and The return output will provide the Image ID of the deleted Image.
 docker rmi -f ImageID ## remove image forcefully .
-docker run --name raja image_name ## run image as your own customized name.
+
 
 
 
