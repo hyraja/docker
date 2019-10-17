@@ -5,7 +5,7 @@ sudo service docker stop ##  stop the Docker daemon process.
 
 Docker information command :
 ----------------------------
-cd /var/lib/docker ## whole docker files available inside this folder.
+cd /var/lib/docker ## whole docker files available inside this folder.but need sudo command to get information of this folder.
 docker system df  ##total disk contain by docker.
 docker info  ## total information of docker .
 
