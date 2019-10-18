@@ -15,7 +15,7 @@ docker run -it centos /bin/bash ## we can use the CentOS image available in Dock
 docker ps ## return the currently running containers.
 docker ps -a ## show all list of the containers on the system.
 docker stats ContainerID ## the statistics of a running container.
-docker run --name raja image_name ## run image as your own customized name inside a container. 
+docker run --name raja image_name ## run image as your own customized name to a container. 
 docker rename existing_container_name new_container_name ## rename existing  container.
 docker top ContainerID ## see the top processes within a container.
 docker attach ContainerID ##  Attach to the running container.(Container ID to which you need to attach.)
