@@ -35,7 +35,7 @@ docker images ## show all images
 docker images -q ## only show image id's.
 docker run image_name ## This command will download the particular image, if it is not already present, and run the OS as a container.
 docker history ImageID ## see all the commands that were run against it.
-docker image purne -a ## Remove all unused images.
+docker image prune ## Remove all unused images.
 docker rmi ImageID ## remove the image  and The return output will provide the Image ID of the deleted Image.
 docker rmi -f ImageID ## remove image forcefully .
 
