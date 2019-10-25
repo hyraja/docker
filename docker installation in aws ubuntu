@@ -12,6 +12,15 @@
   
 # To reduce the need to constantly use sudo. We can do that using the usermod command and add the current user to the docker group. 
      $ sudo usermod -aG docker ${USER}
+     
+#Log out and log back in so that your group membership is re-evaluated.
+
+If testing on a virtual machine, it may be necessary to restart the virtual machine for changes to take effect.
+
+On a desktop Linux environment such as X Windows, log out of your session completely and then log back in.
+
+On Linux, you can also run the following command to activate the changes to groups: 
+     $ newgrp docker
 
 ## Now just exist the ssh session and reenter to get the changes to take affect.
 ## Once you reenter your EC2 instance you type the docker info command for good measure.
@@ -20,6 +29,7 @@
      
  
 # help for installation
+# https://docs.docker.com/install/linux/linux-postinstall/   (official site).
 # https://medium.com/@cjus/installing-docker-ce-on-an-aws-ec2-instance-running-ubuntu-16-04-f42fe7e80869
      
 errors and solutions:
