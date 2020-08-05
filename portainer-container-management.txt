@@ -1,0 +1,64 @@
+portainer for docker manage container.
+=======================================================
+
+Docker and Docker compose installation
+	Connect your instance through putty.
+
+ 	Step 1: updating all your software.
+First of all, make sure we are using clean system.
+
+	sudo apt update
+
+ 	step 2: add the GPG key for the official Docker repository
+
+	curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+ 	step 3: Then add the Docker repository to APT sources
+
+	sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+
+ 	step 4:  we update the package
+	sudo apt update
+
+ 	step 5: install  Docker ce
+
+	sudo apt install -y docker-ce
+
+ 	step 6: create a user ->
+if you decide not to run docker as root user, you will create an non-root user.
+	adduser user_docker
+	 sudo usermod -aG docker user_docker
+          (optional)you can also run the following command to activate the changes to        groups
+	newgrp docker
+
+ 	step 7: Restart the docker service
+	systemctl restart docker
+
+ 	step 8: test docker 
+run the docker hello-world container to test if the installation completed successfully.
+
+	Docker run hello-world
+You will see the following output
+ 
+ 	Step 9: configure docker to start on boot:
+
+	systemctl enable docker
+
+ 	step 10: install portainer.io
+
+	docker volume create portainer_data
+	docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
+
+ 	step 11:  go to web and check 15.207.93.19:9000 you can see the portainer and there you can manage your container .
+
+ 	 step 12: install docker compose:
+
+	sudo curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+Next we’ll set the permissions:
+	sudo chmod +x /usr/local/bin/docker-compose
+
+check docker-compose version
+	docker-compose –version
+docker and docker-compose installation completed
+
