@@ -28,7 +28,7 @@ First of all, make sure we are using clean system.
 if you decide not to run docker as root user, you will create an non-root user.
 	adduser user_docker
 	 sudo usermod -aG docker user_docker
-          (optional)you can also run the following command to activate the changes to        groups
+          (optional)you can also run the following command to activate the changes to groups
 	newgrp docker
 
  	step 7: Restart the docker service
@@ -37,7 +37,7 @@ if you decide not to run docker as root user, you will create an non-root user.
  	step 8: test docker 
 run the docker hello-world container to test if the installation completed successfully.
 
-	Docker run hello-world
+	docker run hello-world
 You will see the following output
  
  	Step 9: configure docker to start on boot:
